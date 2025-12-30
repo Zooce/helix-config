@@ -1,0 +1,96 @@
+attribute = "functions"
+type = "foreground"
+"type.builtin" = "keywords"
+constructor = "functions"
+constant = "other"
+"constant.builtin" = "constants"
+"constant.character" = "constants"
+"constant.numeric" = "constants"
+string = "strings"
+comment = "comments"
+variable = "foreground"
+"variable.builtin" = "constants"
+# "variable.other.member" = "keywords"  # json
+label = "functions"
+punctuation = "punctuation"
+keyword = "keywords"
+operator = "keywords"
+function = "functions"
+"function.macro" = "constants"
+tag = "keywords"
+namespace = "foreground"
+special = "other"
+"markup.heading" = "keywords"
+"markup.list" = "punctuation"
+"markup.link.url" = "strings"
+"markup.link.label" = "strings"
+"markup.link.text" = "functions"
+"markup.quote" = "comments"
+"markup.raw" = "constants"
+diff = "foreground"
+"diff.plus" = "inserted"
+"diff.minus" = "deleted"
+"diff.delta" = "changed"
+"diff.moved" = "accent"
+
+"ui.background" = { fg = "punctuation_dim", bg = "background" }
+"ui.linenr" = "punctuation_dim"
+"ui.linenr.selected" = "foreground"
+"ui.statusline" = { fg = "foreground", bg = "punctuation_dimmer" }
+"ui.statusline.inactive" = { fg = "punctuation_dim", bg = "punctuation_dimmer" }
+"ui.popup" = { fg = "foreground", bg = "punctuation_dimmer" }
+"ui.menu" = { fg = "foreground", bg = "punctuation_dimmer" }
+"ui.menu.selected" = { fg = "foreground", bg = "selection" }
+"ui.picker.header" = { fg = "foreground", bg = "punctuation_dimmer" }
+"ui.selection" = { bg = "selection" }
+"ui.cursor" = { fg = "background", bg = "punctuation" }
+"ui.cursorline.primary" = { bg = "line_highlight" }
+"ui.gutter" = { fg = "punctuation_dim" }
+warning = "changed"
+error = "deleted"
+hint = "constants"
+"ui.text" = "foreground"
+"ui.text.focus" = "foreground"
+"ui.text.info" = "foreground"
+"ui.text.warn" = "changed"
+"ui.text.severe" = "deleted"
+"ui.text.directory" = "constants"
+"ui.window" = { fg = "foreground", bg = "punctuation_dimmer" }
+"ui.bufferline" = { fg = "punctuation_dim", bg = "punctuation_dimmer" }
+"ui.bufferline.active" = { fg = "foreground", bg = "background" }
+"ui.help" = { fg = "foreground", bg = "punctuation_dimmer" }
+
+diagnostic = "foreground"
+"diagnostic.error" = { fg = "foreground", bg = "deleted" }
+"diagnostic.warning" = "changed"
+"diagnostic.info" = "foreground"
+"diagnostic.hint" = "constants"
+"diagnostic.unnecessary" = { fg = "foreground", bg = "comments" }
+
+"ui.virtual.ruler" = { bg = "punctuation_dimmer", fg = "white" }
+"ui.virtual.wrap" = "punctuation_dim"
+"ui.virtual.lsp_semantic.diagnostic.error" = "deleted"
+"ui.virtual.lsp_semantic.diagnostic.warning" = "changed"
+"ui.virtual.lsp_semantic.diagnostic.info" = "foreground"
+"ui.virtual.lsp_semantic.diagnostic.hint" = "constants"
+"ui.virtual.lsp_semantic.modifier.deprecated" = { fg = "deleted", strikethrough = true }
+
+[palette]
+foreground = "#e6e6e6"
+background = "#212121"
+punctuation = "#999999"
+keywords = "#d35568"
+functions = "#d3a355"
+strings = "#a5d355"
+constants = "#55d3c2"
+comments = "#5585d3"
+other = "#a96eb9"
+changed = "#fdbe00"
+deleted = "#e83841"
+inserted = "#85db18"
+line_highlight = "#000000"
+accent = "#2f61b1"
+selection = "#264f78"
+selection_dim = "#162d45"
+punctuation_dim = "#555555"
+punctuation_dimmer = "#333333"

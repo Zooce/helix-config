@@ -1,0 +1,16 @@
+# taken from https://github.com/helix-editor/helix/blob/master/languages.toml#L2063
+# and adding `goal` files to the list
+[[language]]
+name = "git-commit"
+file-types = [
+  { glob = "COMMIT_EDITMSG" },
+  { glob = "MERGE_MSG" },
+  { glob = "TAG_EDITMSG" },
+  { glob = "**/.goals/[0-9][^.]*" }
+]
+comment-token = "#"
+indent = { tab-width = 4, unit = "    " }
+rulers = [51, 73]
+text-width = 72
+grammar = "gitcommit"
+language-servers = [ "commit-lsp" ]
