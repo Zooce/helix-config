@@ -14,3 +14,39 @@ rulers = [51, 73]
 text-width = 72
 grammar = "gitcommit"
 language-servers = [ "commit-lsp" ]
+
+[[language]]
+name = "markdown"
+soft-wrap = { enable = true }
+
+[language-server.intelephense]
+command = "intelephense"
+args = ["--stdio"]
+
+[language-server.intelephense.config.intelephense]
+files.maxSize = 5000000
+# Make sure these files aren't excluded:
+# files.exclude = [
+#     "**/vendor/**/{Tests,tests}/**",
+#     "**/.git/**"
+# ]
+# NOT excluding _ide_helper.php
+stubs = [
+    "Core",
+    "standard",
+    "json",
+    "mbstring",
+    "pcre",
+    "PDO",
+    "mysqli",
+    "curl",
+    "openssl",
+    "bcmath",
+    "date",
+    "hash",
+    "filter",
+    "session",
+    "tokenizer",
+    "xml",
+    "laravel"
+]

@@ -10,6 +10,7 @@ string = "strings"
 comment = "comments"
 variable = "foreground"
 "variable.builtin" = "constants"
+# "variable.parameter" = "comments" # not working fully for zig yet
 # "variable.other.member" = "keywords"  # json
 label = "functions"
 punctuation = "punctuation"
@@ -43,7 +44,10 @@ diff = "foreground"
 "ui.menu.selected" = { fg = "foreground", bg = "selection" }
 "ui.picker.header" = { fg = "foreground", bg = "punctuation_dimmer" }
 "ui.selection" = { bg = "selection" }
+# "ui.cursor" = "magenta"
+# "ui.cursor.normal" = { fg = "red"  }
 "ui.cursor" = { fg = "background", bg = "punctuation" }
+# "ui.cursor.insert" = { fg = "white", bg = "white" }
 "ui.cursorline.primary" = { bg = "line_highlight" }
 "ui.gutter" = { fg = "punctuation_dim" }
 warning = "changed"
@@ -73,7 +77,7 @@ diagnostic = "foreground"
 "ui.virtual.lsp_semantic.diagnostic.warning" = "changed"
 "ui.virtual.lsp_semantic.diagnostic.info" = "foreground"
 "ui.virtual.lsp_semantic.diagnostic.hint" = "constants"
-"ui.virtual.lsp_semantic.modifier.deprecated" = { fg = "deleted", strikethrough = true }
+"ui.virtual.lsp_semantic.modifier.deprecated" = { fg = "deleted", modifiers = ['crossed_out'] }
 
 [palette]
 foreground = "#e6e6e6"
