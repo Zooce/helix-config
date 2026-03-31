@@ -19,6 +19,12 @@ language-servers = [ "commit-lsp" ]
 name = "markdown"
 soft-wrap = { enable = true }
 
+[[language]]
+name = "text"
+scope = "source.txt"
+soft-wrap = { enable = true }
+file-types = ["txt"]
+
 [language-server.intelephense]
 command = "intelephense"
 args = ["--stdio"]
