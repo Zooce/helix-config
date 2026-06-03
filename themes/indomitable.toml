@@ -73,6 +73,7 @@ diagnostic = "foreground"
 
 "ui.virtual.ruler" = { bg = "punctuation_dimmer", fg = "white" }
 "ui.virtual.wrap" = "punctuation_dim"
+"ui.virtual.indent-guide" = "punctuation_dimmer"
 "ui.virtual.lsp_semantic.diagnostic.error" = "deleted"
 "ui.virtual.lsp_semantic.diagnostic.warning" = "changed"
 "ui.virtual.lsp_semantic.diagnostic.info" = "foreground"

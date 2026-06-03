@@ -5,6 +5,10 @@ cursorline = true
 auto-completion = false
 middle-click-paste = false
 trim-trailing-whitespace = true
+rulers = [81]
+
+[editor.indent-guides]
+render = true
 
 [editor.statusline]
 right = ["diagnostics", "primary-selection-length", "selections", "register", "file-encoding", "file-type", "position"]
@@ -21,6 +25,8 @@ enable = false
 
 [keys.normal]
 a = ["move_char_right", "insert_mode"] # because `a` in helix is gay
+C-j = ["page_down", "align_view_center"]
+C-k = ["page_up", "align_view_center"]
 
 [keys.insert]
 C-left = ["move_prev_word_end", "collapse_selection"]
