@@ -1,5 +1,5 @@
 attribute = "functions"
-type = "foreground"
+type = "other"
 "type.builtin" = "keywords"
 constructor = "functions"
 constant = "other"
