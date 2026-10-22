@@ -24,3 +24,47 @@ name = "text"
 scope = "source.txt"
 soft-wrap = { enable = true }
 file-types = ["txt"]
+
+# [[language]]
+# name = "zig"
+# auto-format = false
+
+# TypeScript / Angular - uses mise-managed Node
+
+[language-server.angular-ls]
+command = "ngserver"
+args = [
+  "--ngProbeLocations",
+  "${$NODE_MODULES_GLOBAL}",
+  "--tsProbeLocations",
+  "${$NODE_MODULES_GLOBAL}",
+  "--stdio",
+  # If this for some reason doesn't work, try replacing ${NODE_MODULES_GLOBAL} with the absolute paths, e.g. output of `npm root -g`
+  # $ echo "export NODE_MODULES_GLOBAL=$(npm root -g)"
+]
+file-types = ["ts", "typescript", "html"]
+
+[[language]]
+name = "typescript"
+roots = ["package.json"]
+language-servers = ["angular-ls", "typescript-language-server"]
+formatter = { command = "biome", args = ["format", "--stdin-file-path", "{{file}}"] }
+auto-format = true
+
+[[language]]
+name = "javascript"
+roots = ["package.json"]
+language-servers = ["typescript-language-server"]
+formatter = { command = "biome", args = ["format", "--stdin-file-path", "{{file}}"] }
+auto-format = true
+
+[[language]]
+name = "html"
+roots = ["package.json"]
+language-servers = ["angular-ls", "vscode-html-language-server"]
+formatter = { command = "biome", args = ["format", "--stdin-file-path", "{{file}}"] }
+
+[[language]]
+name = "tsx"
+roots = ["package.json"]
+language-servers = ["typescript-language-server"]
